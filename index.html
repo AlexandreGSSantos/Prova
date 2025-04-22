@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Calendario Interativo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
 <body>
     <h1>Calculadora de gastos mensais</h1>
 
+    <form action="">
     <label for="item">Digite o item</label><br>
     <input type="text" id="item" name="item"><br>
     <label for="custo"></label>Digite o preço dele<br>
     <input type="number" id="custo" name="custo"><br>
     <label for="categoria">Digite o a qual categoria ele se encaixa</label><br>
     <input type="text" id="categoria" name="categoria"><br>
+    <input type="submit" value="aplicar" onclick="Adicionar()">
+    <input type="reset" value="resetar">
+    </form>
+
+    
+    <hr/>
 
     <table class="gastos" id="gastos">
         <tr>
@@ -42,6 +51,9 @@
             <th>xxx</th>
         </tr>
     </table>
+
+
+    <script src='main.js'></script>
     
 </body>
 </html>
