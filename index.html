@@ -9,47 +9,37 @@
 </head>
 <body>
     <h1>Calculadora de gastos mensais</h1>
-
-    <form action="">
-    <label for="item">Digite o item</label><br>
-    <input type="text" id="item" name="item"><br>
-    <label for="custo"></label>Digite o preço dele<br>
-    <input type="number" id="custo" name="custo"><br>
-    <label for="categoria">Digite o a qual categoria ele se encaixa</label><br>
-    <input type="text" id="categoria" name="categoria"><br>
-    <input type="submit" value="aplicar" onclick="Adicionar()">
+<form id="formGastos">
+        <div>
+            <label for="item">Digite o item</label>
+            <input type="text" id="item">
+        </div>
+        <div>
+            <label for="custo">Digite o custo</label>
+            <input type="number" id="custo">
+          </div>
+          <div>
+            <label for="categoria">Digite a categoria</label>
+            <input type="text" id="categoria">
+          </div>
+    <button onclick="Adicionar()" type="button"></button>
     <input type="reset" value="resetar">
     </form>
-
     
     <hr/>
 
     <table class="gastos" id="gastos">
-        <tr>
-            <th>Item</th>
-            <th>Custo</th>
-            <th>Categoria</th>
+        <thead>
+            <tr>
+            <th>item</th>
+            <th>custo</th>
+            <th>categoria</th>
         </tr>
-        <tr>
-            <th>xxx</th>
-            <th>R$00,00</th>
-            <th>xxx</th>
-        </tr>
-        <tr>
-            <th>xxx</th>
-            <th>R$00,00</th>
-            <th>xxx</th>
-        </tr>
-        <tr>
-            <th>xxx</th>
-            <th>R$00,00</th>
-            <th>xxx</th>
-        </tr>
-        <tr>
-            <th>xxx</th>
-            <th>R$00,00</th>
-            <th>xxx</th>
-        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+        
     </table>
 
 
