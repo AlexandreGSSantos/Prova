@@ -1,3 +1,23 @@
+let total = 0;
+
+function atualizarTotal() {
+    const tabelaBody = document.getElementById('tabelaGastos');
+    const totalGastosElement = document.getElementById('totalGastos');
+    
+    for (let i = 0; i < tabelaBody.rows.length; i++) {
+      const linha = tabelaBody.rows[i];
+      const custoCelula = linha.cells[1];
+      if (custoCelula) {
+        const custoTexto = custoCelula.textContent.trim();
+        const custoNumerico = parseFloat(custoTexto.replace(',', '.'));
+        if (!isNaN(custoNumerico)) {
+          total += custoNumerico;
+        }
+      }
+    }
+    totalGastosElement.textContent = `Total: R$ ${total.toFixed(2)}`;
+  }
+
 function Adicionar() {
     const itemInput = document.getElementById('item');
     const custoInput = document.getElementById('custo');
@@ -29,6 +49,7 @@ function Adicionar() {
       itemInput.value = '';
       custoInput.value = '';
       categoriaInput.value = '';
+      atualizarTotal();
     } else {
       alert('Por favor, preencha todos os campos.');
     }
